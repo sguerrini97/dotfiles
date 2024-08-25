@@ -13,7 +13,8 @@
         // "sway/scratchpad"
     ],
     "modules-center": [
-        "clock"
+        "clock",
+	"tray"
     ],
     "modules-right": [
         //"idle_inhibitor",
@@ -23,10 +24,9 @@
 	//"cpu",
 	//"memory",
         //"sway/language",
-        "power-profiles-daemon",
+        //"power-profiles-daemon",
         "backlight",
-        "battery",
-        "tray"
+        "battery"
     ],
     // Modules configuration
     "hyprland/window": {
@@ -101,7 +101,7 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
+        "icon-size": 21,
         "spacing": 10
     },
     "clock": {
