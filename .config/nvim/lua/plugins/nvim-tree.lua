@@ -29,6 +29,12 @@ vim.api.nvim_create_autocmd("QuitPre", {
   end
 })
 
+local function on_attach(bufnr)
+  local api = require("nvim-tree.api")
+  -- default mappings
+  api.config.mappings.default_on_attach(bufnr)
+end
+
 -- toggle with space+e
 vim.api.nvim_set_keymap('n', '<Space>e', ':NvimTreeToggle<cr>', { noremap = true })
 
@@ -40,6 +46,8 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   config = function()
-    require("nvim-tree").setup {}
+    require("nvim-tree").setup({
+      on_attach = on_attach,
+    })
   end,
 }
