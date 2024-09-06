@@ -16,6 +16,7 @@ vim.keymap.set('n', '<Space>st', telescopebuiltin.live_grep, {})
 require("mason").setup()
 
 -- language servers
+require'lspconfig'.beancount.setup{} -- Beancount
 require'lspconfig'.dockerls.setup{} -- Docker
 require'lspconfig'.gopls.setup{} -- Go
 require'lspconfig'.ts_ls.setup{} -- JavaScript/TypeScript
