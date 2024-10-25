@@ -4,7 +4,12 @@ require("config.lazy")
 vim.api.nvim_set_keymap("n", "<Space>q", ":q<cr>", { noremap = true })
 -- close tab
 vim.api.nvim_set_keymap("n", "<Space>c", ":tabclose<cr>", { noremap = true })
--- line numbers
+-- loop over tabs
+vim.api.nvim_set_keymap("n", "<Tab>", ":tabnext<cr>", { noremap = true })
+vim.api.nvim_set_keymap("n", "<S-Tab>", ":tabprevious<cr>", { noremap = true })
+-- open lazygit in floaterm
+vim.api.nvim_set_keymap("n", "<Space>gg", ":FloatermNew --width=0.96 --height=0.96 lazygit<cr>", { noremap = true })
+-- show line numbers
 vim.cmd("set number")
 
 -- telescope
