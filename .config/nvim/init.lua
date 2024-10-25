@@ -19,8 +19,15 @@ require("mason").setup()
 require("lspconfig").beancount.setup({}) -- Beancount
 require("lspconfig").dockerls.setup({}) -- Docker
 require("lspconfig").gopls.setup({}) -- Go
-require("lspconfig").ts_ls.setup({}) -- JavaScript/TypeScript
-require("lspconfig").ltex.setup({}) -- LaTeX
 require("lspconfig").intelephense.setup({}) -- PHP
+require("lspconfig").jdtls.setup({}) -- Java
+require("lspconfig").ltex.setup({}) -- LaTeX
 require("lspconfig").pyright.setup({}) -- Python
 require("lspconfig").rust_analyzer.setup({}) -- Rust
+require("lspconfig").ts_ls.setup({}) -- JavaScript/TypeScript
+
+-- set options
+local set = vim.opt
+set.tabstop = 2
+set.softtabstop = 2
+set.shiftwidth = 2
