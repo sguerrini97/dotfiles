@@ -38,6 +38,11 @@ require("mason-lspconfig").setup({
 						},
 					},
 				})
+			elseif server_name == "pyright" then
+				require("lspconfig").pyright.setup({
+					root_dir = require("lspconfig").util.root_pattern("requirements.txt"),
+					python_path = "./venv/bin/python3",
+				})
 			else
 				require("lspconfig")[server_name].setup({})
 			end
