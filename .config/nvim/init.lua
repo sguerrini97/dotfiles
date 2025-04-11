@@ -11,6 +11,8 @@ vim.api.nvim_set_keymap("n", "<S-Tab>", ":tabprevious<cr>", { noremap = true })
 vim.api.nvim_set_keymap("n", "<Space>gg", ":FloatermNew --width=0.96 --height=0.96 lazygit<cr>", { noremap = true })
 -- show line numbers
 vim.cmd("set number")
+-- show relative line numbers
+vim.api.nvim_set_keymap("n", "<Space>rn", ":set rnu!<cr>", { noremap = true })
 
 -- telescope
 local telescopebuiltin = require("telescope.builtin")
