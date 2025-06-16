@@ -16,7 +16,7 @@ Environment=STGUIADDRESS=
 Environment=PUID=%U
 Environment=PGID=%G
 SecurityLabelDisable=true
-Volume=${HOME}/Syncthing:/var/syncthing
+Volume=%h/Syncthing:/var/syncthing
 
 [Service]
 TimeoutStartSec=900
