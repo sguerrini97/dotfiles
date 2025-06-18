@@ -1,6 +1,25 @@
 require("nvchad.configs.lspconfig").defaults()
 
-local servers = { "html", "cssls", "gopls", "gofumpt", "intelephense" }
+local servers = {
+  "cssls",
+  "eslint-lsp",
+  "gofumpt",
+  "gopls",
+  "html",
+  "intelephense",
+  "typescript-language-server",
+}
 vim.lsp.enable(servers)
+
+local lspconfig = require "lspconfig"
+
+local configs = {
+  "lua_ls",
+  "ts_ls",
+}
+
+for _, config in pairs(configs) do
+  lspconfig[config].setup {}
+end
 
 -- read :h vim.lsp.config for changing options of lsp servers
