@@ -43,6 +43,6 @@
 # resize-overlay-duration = 4s 200ms
 
 background = 000000
-background-opacity = 0.80
+background-opacity = 0.85
 window-height = 40
 window-width = 135
