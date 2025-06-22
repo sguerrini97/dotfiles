@@ -1,0 +1,4 @@
+[Network]
+Subnet=10.88.0.0/24
+Gateway=10.88.0.1
+Label=postgres-network
