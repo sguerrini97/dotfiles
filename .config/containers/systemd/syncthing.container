@@ -12,7 +12,6 @@ PublishPort=22000:22000/udp
 PublishPort=21027:21027/udp
 HostName=syncthing-%H
 UserNS=keep-id
-Environment=STGUIADDRESS=
 Environment=PUID=%U
 Environment=PGID=%G
 SecurityLabelDisable=true
