@@ -5,8 +5,8 @@ PublishPort=8096:8096/tcp
 UserNS=keep-id
 EnvironmentFile=couchdb.env
 SecurityLabelDisable=true
-Volume=jellyfin-config:/config
-Volume=jellyfin-cache:/cache
+Volume=jellyfin-config:/config:Z
+Volume=jellyfin-cache:/cache:Z
 Volume=/media/movies:/media/movies:ro
 Volume=/media/tvshows:/media/tvshows:ro
 
