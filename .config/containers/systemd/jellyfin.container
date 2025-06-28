@@ -1,0 +1,20 @@
+[Container]
+Image=docker.io/jellyfin/jellyfin:latest
+AutoUpdate=registry
+PublishPort=8096:8096/tcp
+UserNS=keep-id
+EnvironmentFile=couchdb.env
+SecurityLabelDisable=true
+Volume=/media/jellyfin/config:/config
+Volume=/media/jellyfin/cache:/cache
+Volume=/media/movies:/media/movies:ro
+Volume=/media/tvshows:/media/tvshows:ro
+
+[Service]
+# Inform systemd of additional exit status
+SuccessExitStatus=0 143
+TimeoutStartSec=900
+Restart=always
+
+[Install]
+WantedBy=default.target
