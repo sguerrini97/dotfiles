@@ -10,6 +10,14 @@ AutoUpdate=registry
 PublishPort=5984:5984/tcp
 HostName=couchdb-%H
 EnvironmentFile=couchdb.env
+UserNS=keep-id
+Environment=PUID=%U
+Environment=PGID=%G
+Environment=UMASK=022
+Environment=TZ=Europe/Rome
+SecurityLabelDisable=true
+Volume=/media/couchdb/data:/opt/couchdb/data
+Volume=/media/couchdb/etc/local.d:/opt/couchdb/etc/local.d
 
 [Service]
 TimeoutStartSec=900
