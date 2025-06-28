@@ -1,0 +1,19 @@
+[Unit]
+Description=CouchDB
+After=podman-user-wait-network-online.service
+Wants=podman-user-wait-network-online.service
+
+[Container]
+ContainerName=couchdb
+Image=docker.io/library/couchdb:3.4.3
+AutoUpdate=registry
+PublishPort=5984:5984/tcp
+HostName=couchdb-%H
+EnvironmentFile=couchdb.env
+
+[Service]
+TimeoutStartSec=900
+Restart=always
+
+[Install]
+WantedBy=multi-user.target default.target
