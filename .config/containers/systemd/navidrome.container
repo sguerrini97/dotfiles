@@ -15,7 +15,7 @@ Environment=PUID=%U
 Environment=PGID=%G
 SecurityLabelDisable=true
 Volume=/media/music:/music:ro
-Volume=/media/navidrome/data:/data
+Volume=/media/navidrome:/data
 
 [Service]
 TimeoutStartSec=900
