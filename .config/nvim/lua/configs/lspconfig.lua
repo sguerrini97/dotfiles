@@ -7,6 +7,7 @@ local servers = {
   "gopls",
   "html",
   "intelephense",
+  "pyright",
   "typescript-language-server",
 }
 vim.lsp.enable(servers)
@@ -15,6 +16,7 @@ local lspconfig = require "lspconfig"
 
 local configs = {
   "lua_ls",
+  "pyright",
   "ts_ls",
 }
 
