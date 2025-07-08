@@ -1,0 +1,18 @@
+[Unit]
+Description=Ollama podman
+
+[Container]
+Image=docker.io/ollama/ollama
+AutoUpdate=registry
+PublishPort=11434:11434
+HostName=ollama-%H
+Volume=ollama-data:/root/.ollama
+ContainerName=ollama
+Network=ollama.network
+
+[Service]
+TimeoutStartSec=900
+Restart=always
+
+[Install]
+#WantedBy=default.target

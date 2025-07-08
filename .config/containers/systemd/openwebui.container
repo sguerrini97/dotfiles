@@ -1,0 +1,20 @@
+[Unit]
+Description=open-webui podman
+After=ollama.service
+
+[Container]
+Image=ghcr.io/open-webui/open-webui:main
+AutoUpdate=registry
+PublishPort=11480:8080
+HostName=openwebui-%H
+Volume=openwebui-data:/app/backend/data
+ContainerName=openwebui
+Network=ollama.network
+Environment=OLLAMA_BASE_URL=http://ollama:11434
+
+[Service]
+TimeoutStartSec=900
+Restart=always
+
+[Install]
+#WantedBy=default.target
