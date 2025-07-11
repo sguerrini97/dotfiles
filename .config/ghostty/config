@@ -2,6 +2,9 @@
 background = 000000
 background-opacity = 0.85
 
+# Font
+font-size = 13
+
 # Clipboard
 clipboard-trim-trailing-spaces = true
 copy-on-select = true
