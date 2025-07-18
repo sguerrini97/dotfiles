@@ -13,6 +13,7 @@
         "sway/window"
     ],
     "modules-center": [
+        "clock"
     ],
     "modules-right": [
         "tray",
@@ -23,10 +24,8 @@
         "memory",
         "power-profiles-daemon",
         "temperature",
-        // "backlight",
         "sway/language",
-        "battery",
-        "clock"
+        "battery"
     ],
     // Modules configuration
     // "sway/workspaces": {
