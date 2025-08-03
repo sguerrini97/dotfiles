@@ -2,18 +2,24 @@ require("nvchad.configs.lspconfig").defaults()
 
 local servers = {
   "cssls",
-  "eslint-lsp",
-  "gofumpt",
+  "elixirls",
   "gopls",
   "html",
   "intelephense",
+  "lua_ls",
   "pyright",
-  "typescript-language-server",
+  "ts_ls",
 }
 vim.lsp.enable(servers)
 
 local lspconfig = require "lspconfig"
 
+-- Specific configs
+lspconfig["elixirls"].setup {
+  cmd = { vim.fn.expand "$HOME/.local/share/nvim/mason/bin/elixir-ls" },
+}
+
+-- Generic configs
 local configs = {
   "lua_ls",
   "pyright",
