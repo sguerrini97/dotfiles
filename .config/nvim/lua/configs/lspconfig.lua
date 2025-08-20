@@ -2,6 +2,7 @@ require("nvchad.configs.lspconfig").defaults()
 
 local servers = {
   "cssls",
+  "dartls",
   "elixirls",
   "gopls",
   "html",
@@ -21,6 +22,7 @@ lspconfig["elixirls"].setup {
 
 -- Generic configs
 local configs = {
+  "dartls",
   "lua_ls",
   "pyright",
   "ts_ls",
