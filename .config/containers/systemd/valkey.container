@@ -1,0 +1,22 @@
+[Unit]
+Description=Valkey server
+After=podman-user-wait-network-online.service
+Wants=podman-user-wait-network-online.service
+
+[Container]
+ContainerName=valkey
+Image=docker.io/valkey/valkey:latest
+AutoUpdate=registry
+PublishPort=6379:6379/tcp
+HostName=valkey-%H
+EnvironmentFile=valkey.env
+Volume=valkey-data:/data
+Exec=valkey-server --supervised systemd
+Notify=true
+
+[Service]
+TimeoutStartSec=900
+Restart=always
+
+[Install]
+WantedBy=multi-user.target default.target
