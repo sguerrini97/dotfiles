@@ -7,6 +7,7 @@ local servers = {
   "gopls",
   "html",
   "intelephense",
+  "jdtls",
   "lua_ls",
   "pyright",
   "ts_ls",
