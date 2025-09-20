@@ -8,7 +8,9 @@ Image=docker.io/stashapp/stash:latest
 AutoUpdate=registry
 PublishPort=9999:9999/tcp
 HostName=stash-%H
+User=1000:1000
 UserNS=keep-id
+Environment=STASH_CONFIG_FILE=/config/config.yml
 Environment=STASH_STASH=/data/
 Environment=STASH_GENERATED=/generated/
 Environment=STASH_METADATA=/metadata/
@@ -18,8 +20,8 @@ SecurityLabelDisable=true
 Volume=/etc/localtime:/etc/localtime:ro
 Volume=/media/stash/blobs:/blobs
 Volume=/media/stash/cache:/cache
-Volume=/media/stash/config:/root/.stash
-Volume=/media/stash/data:/data
+Volume=stash-config:/config
+Volume=/media/stash/data:/data:ro
 Volume=/media/stash/generated:/generated
 Volume=/media/stash/metadata:/metadata
 
