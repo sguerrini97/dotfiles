@@ -1,0 +1,31 @@
+[Unit]
+Description=Stash podman
+After=podman-user-wait-network-online.service
+Wants=podman-user-wait-network-online.service
+
+[Container]
+Image=docker.io/stashapp/stash:latest
+AutoUpdate=registry
+PublishPort=9999:9999/tcp
+HostName=stash-%H
+UserNS=keep-id
+Environment=STASH_STASH=/data/
+Environment=STASH_GENERATED=/generated/
+Environment=STASH_METADATA=/metadata/
+Environment=STASH_CACHE=/cache/
+Environment=STASH_PORT=9999
+SecurityLabelDisable=true
+Volume=/etc/localtime:/etc/localtime:ro
+Volume=/media/stash/blobs:/blobs
+Volume=/media/stash/cache:/cache
+Volume=/media/stash/config:/root/.stash
+Volume=/media/stash/data:/data
+Volume=/media/stash/generated:/generated
+Volume=/media/stash/metadata:/metadata
+
+[Service]
+TimeoutStartSec=900
+Restart=always
+
+[Install]
+WantedBy=multi-user.target default.target
