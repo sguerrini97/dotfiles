@@ -14,12 +14,10 @@ local servers = {
 }
 vim.lsp.enable(servers)
 
-local lspconfig = require "lspconfig"
-
 -- Specific configs
-lspconfig["elixirls"].setup {
+vim.lsp.config("elixirls", {
   cmd = { vim.fn.expand "$HOME/.local/share/nvim/mason/bin/elixir-ls" },
-}
+})
 
 -- Generic configs
 local configs = {
@@ -30,7 +28,7 @@ local configs = {
 }
 
 for _, config in pairs(configs) do
-  lspconfig[config].setup {}
+  vim.lsp.config(config, {})
 end
 
 -- read :h vim.lsp.config for changing options of lsp servers
