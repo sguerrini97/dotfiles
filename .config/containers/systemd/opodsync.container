@@ -8,9 +8,6 @@ Image=docker.io/ganeshlab/opodsync:latest
 AutoUpdate=registry
 PublishPort=8181:8080/tcp
 HostName=opodsync-%H
-User=1000:1000
-UserNS=keep-id
-SecurityLabelDisable=true
 Volume=opodsync-data:/var/www/server/data
 
 [Service]
