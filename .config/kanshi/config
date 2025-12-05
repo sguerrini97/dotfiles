@@ -4,6 +4,16 @@ output "Philips Consumer Electronics Company PHL 245E1 0x0001308C" {
   alias $PHL245E
 }
 
+output "Lenovo Group Limited 0x40A9 Unknown" {
+  mode 1920x1080@60.008Hz
+  position 0,0
+  alias $L14
+}
+
 profile {
   output $PHL245E enable
+}
+
+profile {
+  output $L14 enable
 }
