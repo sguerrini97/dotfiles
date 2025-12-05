@@ -21,6 +21,7 @@ set $term ghostty
 # on the original workspace that the command was run on.
 # Recommends: rofi-wayland
 set $rofi_cmd rofi \
+        -i \
         -terminal '$term'
 # Shows a combined list of the applications with desktop files and
 # executables from PATH.
