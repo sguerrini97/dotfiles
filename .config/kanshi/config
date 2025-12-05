@@ -1,0 +1,9 @@
+output "Philips Consumer Electronics Company PHL 245E1 0x0001308C" {
+  mode  2560x1440@74.968Hz
+  position 0,0
+  alias $PHL245E
+}
+
+profile {
+  output $PHL245E enable
+}
