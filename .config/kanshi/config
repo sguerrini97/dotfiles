@@ -10,10 +10,20 @@ output "Lenovo Group Limited 0x40A9 Unknown" {
   alias $L14
 }
 
+output "LG Electronics LG ULTRAGEAR 501NTHM70265" {
+  mode 2560x1440@165.059Hz
+  position 0,0
+  alias $LGUG
+}
+
 profile {
   output $PHL245E enable
 }
 
 profile {
   output $L14 enable
+}
+
+profile {
+  output $LGUG enable
 }
