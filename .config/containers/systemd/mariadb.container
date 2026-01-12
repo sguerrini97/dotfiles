@@ -5,7 +5,7 @@ Wants=podman-user-wait-network-online.service
 
 [Container]
 ContainerName=mariadb
-Image=docker.io/library/mariadb:12.2
+Image=docker.io/library/mariadb:12.1
 AutoUpdate=registry
 PublishPort=3306:3306/tcp
 HostName=mariadb-%H
