@@ -10,8 +10,8 @@ AutoUpdate=registry
 PublishPort=6060:6060/tcp
 HostName=booklore-%H
 UserNS=keep-id
-Environment=APP_USER_ID=%U
-Environment=APP_GROUP_ID=%G
+Environment=USER_ID=%U
+Environment=GROUP_ID=%G
 Environment=TZ=Europe/Rome
 Environment=BOOKLORE_PORT=6060
 EnvironmentFile=booklore.env
