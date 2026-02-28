@@ -8,6 +8,7 @@ Image=docker.stirlingpdf.com/stirlingtools/stirling-pdf:latest
 AutoUpdate=registry
 PublishPort=10809:8080/tcp
 HostName=stirling-pdf-%H
+Volume=stirling-data:/configs
 
 [Service]
 TimeoutStartSec=900
