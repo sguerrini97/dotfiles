@@ -16,6 +16,17 @@ output "LG Electronics LG ULTRAGEAR 501NTHM70265" {
   alias $LGUG
 }
 
+output "Xiaomi Corporation Mi monitor 5505610135272" {
+  mode 3440x1440@180.000Hz
+  position 0,0
+  alias $XIAOMI
+}
+
+profile {
+  output $XIAOMI enable position 0,0
+  output $L14 enable position 3440,0
+}
+
 profile {
   output $PHL245E enable
 }
@@ -26,4 +37,8 @@ profile {
 
 profile {
   output $LGUG enable
+}
+
+profile {
+  output $XIAOMI enable
 }
