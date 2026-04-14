@@ -1,4 +1,4 @@
-require("Spoons/WanderFocus")
+# require("Spoons/WanderFocus")
 
 local hyper = { "cmd", "alt", "ctrl" }
 local mash = { "cmd", "alt" }
