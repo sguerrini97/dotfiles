@@ -28,6 +28,11 @@ profile {
 }
 
 profile {
+  output $LGUG enable position 0,0
+  output $L14 enable position 2560,0
+}
+
+profile {
   output $PHL245E enable
 }
 
