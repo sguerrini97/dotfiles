@@ -11,7 +11,7 @@ output "Lenovo Group Limited 0x40A9 Unknown" {
 }
 
 output "LG Electronics LG ULTRAGEAR 501NTHM70265" {
-  mode 2560x1440@165.059Hz
+  mode 2560x1440@180.063Hz
   position 0,0
   alias $LGUG
 }
