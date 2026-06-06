@@ -21,3 +21,4 @@ alias sudo='sudo '
 alias mpv='flatpak run io.mpv.Mpv '
 alias vlc='flatpak run org.videolan.VLC '
 alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias glow='glow -p '
