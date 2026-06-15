@@ -1,0 +1,82 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "plugin": [
+    "superpowers@git+https://github.com/obra/superpowers.git"
+  ],
+  "default_agent": "plan",
+  "permission": {
+    "question": "allow",
+    "websearch": "allow"
+  },
+  "mcp": {
+    "neon": {
+      "type": "remote",
+      "url": "https://mcp.neon.tech/mcp",
+      "enabled": false
+    },
+    "mongodb": {
+      "type": "local",
+      "command": [
+        "npx",
+        "-y",
+        "mongodb-mcp-server@latest",
+        "--readOnly"
+      ],
+      "enabled": false
+    },
+    "codegraph": {
+      "type": "local",
+      "command": [
+        "codegraph",
+        "serve",
+        "--mcp"
+      ],
+      "enabled": true
+    }
+  },
+  "provider": {
+    "lmstudio": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "LM Studio (local)",
+      "options": {
+        "baseURL": "http://127.0.0.1:1234/v1"
+      },
+      "models": {
+        "gemma-4-12b-qat": {
+          "name": "google/gemma-4-12b-qat"
+        },
+        "qwen/qwen3.5-9b": {
+          "name": "qwen/qwen3.5-9b"
+        }
+      }
+    }
+  },
+  "agent": {
+    "build": {
+      "model": "opencode-go/deepseek-v4-flash"
+    },
+    "plan": {
+      "model": "opencode-go/minimax-m3"
+    },
+    "general": {
+      "model": "opencode-go/deepseek-v4-flash"
+    },
+    "explore": {
+      "model": "opencode-go/deepseek-v4-flash"
+    },
+    "scout": {
+      "model": "opencode-go/deepseek-v4-flash"
+    },
+    "local-gemma": {
+      "mode": "subagent",
+      "model": "lmstudio/google/gemma-4-12b-qat",
+      "description": "Capable local model (12B) with good tool-use — suitable for implementation, debugging, and development work without cloud dependency. Needs LM Studio running."
+    },
+    "local-qwen": {
+      "mode": "subagent",
+      "model": "lmstudio/qwen/qwen3.5-9b",
+      "description": "Small & fast local model (9B) — best for quick text-only tasks: single-file edits, simple lookups, quick questions. Weak with tool chains. Needs LM Studio running."
+    }
+  },
+  "lsp": true
+}
