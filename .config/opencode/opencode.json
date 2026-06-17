@@ -32,6 +32,23 @@
         "--mcp"
       ],
       "enabled": true
+    },
+    "openchrome": {
+      "type": "local",
+      "command": [
+        "openchrome",
+        "serve",
+        "--auto-launch"
+      ],
+      "enabled": false
+    },
+    "context7": {
+      "type": "remote",
+      "url": "https://mcp.context7.com/mcp",
+      "enabled": true,
+      "headers": {
+        "CONTEXT7_API_KEY": "{file:~/.config/opencode/secrets/context7}"
+      }
     }
   },
   "provider": {
