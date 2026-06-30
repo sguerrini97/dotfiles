@@ -1,0 +1,10 @@
+{
+  "lastChangelogVersion": "0.80.2",
+  "theme": "dark",
+  "defaultProvider": "opencode",
+  "defaultModel": "deepseek-v4-flash-free",
+  "defaultThinkingLevel": "medium",
+  "packages": [
+    "npm:pi-subagents"
+  ]
+}
